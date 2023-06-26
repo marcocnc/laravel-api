@@ -1,0 +1,21 @@
+@import '~bootstrap/scss/bootstrap';
+
+body{
+    header{
+        height: 90px;
+        background: linear-gradient(to top right, #1a001a 0%, #170018 50%, #000000 100%);
+        nav{
+            ul{
+                li{
+                    list-style: none;
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    background-color: rgb(37, 37, 37);
+    color:white;
+}
