@@ -30,7 +30,7 @@
                     <td>{{$post['name']}}</td>
                     <td><span class="badge text-bg-success">{{$post->type?->name}}</span></td>
                     <td>
-                        @forelse ($technologies as $tech)
+                        @forelse ($post->technologies as $tech)
                             {{$tech->name}}
                         @empty
                             - Non sono presenti tag

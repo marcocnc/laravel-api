@@ -67,13 +67,13 @@
                 <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                     @foreach ($technologies as $technology)
                         <input
-                        type="radio"
+                        type="checkbox"
                         class="btn-check"
-                        name="btnradio"
-                        id="tag{{$loop->iteration}}"
+                        name="technologies"
+                        id="{{$technology->slug}}"
                         autocomplete="off"
                         value="{{$technology->id}}">
-                        <label class="btn btn-outline-primary" for="btnradio1">{{$technology->name}}</label>
+                        <label class="btn btn-outline-primary" for="{{$technology->slug}}">{{$technology->name}}</label>
                     @endforeach
             </div>
 

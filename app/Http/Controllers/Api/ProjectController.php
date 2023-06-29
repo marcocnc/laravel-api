@@ -11,8 +11,14 @@ class ProjectController extends Controller
 {
     public function index(){
 
-        $posts = Post::all();
+        $posts = Post::with('type', 'technologies')->get();
         return response()->json($posts);
+    }
+
+    public function getPost($slug){
+        $post = Post::where('slug', $slug)->with('type', 'technologies')->first();
+
+        return response()->json($post);
     }
 }
 
